@@ -15,7 +15,7 @@ public class PersonRepository {
 
     public List<Person> getPersonsByCity(String city) {
         return entityManager.createQuery("SELECT p FROM Person p WHERE p.cityOfLiving = :city")
-                .setParameter("city", city)
+               .setParameter("city", city)
                 .getResultList();
 
     }
